@@ -9,6 +9,8 @@ RUN apk --no-cache add ca-certificates gettext postfix
 COPY postfix-main.cf /root/conf/
 COPY entrypoint.sh /
 
+RUN chmod +x /entrypoint.sh
+
 USER 1001
 
 EXPOSE 2525
